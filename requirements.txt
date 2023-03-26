@@ -38,3 +38,6 @@ tablib
 xlrd
 xlwt
 zipp
+
+gunicorn
+
