@@ -15,7 +15,7 @@ echo "Starting $NAME"
 
 # Activate the virtual environment
 cd $DJANGODIR
-source /opt/website.smsgateway/.venv/bin/activate
+source /opt/website.smsgateway/venv/bin/activate
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 
