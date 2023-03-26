@@ -9,6 +9,8 @@
 *.tmPreferences.cache
 *.stTheme.cache
 
+db.sqlite3*
+
 # workspace files are user-specific
 *.sublime-workspace
 
