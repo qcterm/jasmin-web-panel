@@ -41,3 +41,7 @@ zipp
 
 gunicorn
 
+twisted
+txamqp
+smpp.pdu3==0.6
+smpplib==2.2.2
