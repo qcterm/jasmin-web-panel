@@ -1,4 +1,4 @@
-"This script will call  lookup api to get carrier and location of the destination number"
+"tag carrier via number prefix"
 
 import requests, json
 
