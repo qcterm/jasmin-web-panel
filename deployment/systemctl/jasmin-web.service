@@ -6,8 +6,8 @@ After=network.target
 Type=simple
 SyslogIdentifier=jasminweb
 PermissionsStartOnly=true
-User=jasmin
-Group=jasmin
+User=root
+Group=root
 Environment="DJANGO_SETTINGS_MODULE=config.settings.pro"
 WorkingDirectory=/opt/website.smsgateway/deploy
 ExecStart=/opt/website.smsgateway/venv/bin/gunicorn --bind unix:/opt/website.smsgateway/tmp/gunicorn.sock config.wsgi --name website.sms --workers 3 --timeout=120 --log-level=info
