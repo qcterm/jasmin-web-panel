@@ -3,8 +3,8 @@
 NAME="website.sms"                                  # Name of the application
 DJANGODIR=/opt/website.smsgateway/deploy                 # Django project directory
 SOCKFILE=/opt/website.smsgateway/tmp/gunicorn.sock                                                 # we will communicte using this unix socket
-USER=root                                      # the user to run as
-GROUP=root                                    # the group to run as
+USER=jasmin                                      # the user to run as
+GROUP=jasmin                                    # the group to run as
 NUM_WORKERS=2                                   # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=config.settings.pro            # which settings file should Django use
 DJANGO_WSGI_MODULE=config.wsgi                     # WSGI module name
