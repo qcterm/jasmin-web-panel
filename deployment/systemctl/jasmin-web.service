@@ -1,0 +1,20 @@
+[Unit]
+Description=Jasmin Web Panel
+After=network.target
+
+[Service]
+Type=simple
+SyslogIdentifier=jasminweb
+PermissionsStartOnly=true
+User=username
+Group=username
+Environment="DJANGO_SETTINGS_MODULE=config.settings.pro"
+WorkingDirectory=/opt/website.smsgateway/deploy
+ExecStart=/opt/website.smsgateway/venv/bin/gunicorn --bind unix:/opt/website.smsgateway/tmp/gunicorn.sock config.wsgi --name website.sms --workers 3 --timeout=120 --log-level=info
+StandardOutput=file:/opt/website.smsgateway/logs/gunicorn.log
+StandardError=file:/opt/website.smsgateway/logs/gunicorn.log
+StandardOutput=journal+console
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
